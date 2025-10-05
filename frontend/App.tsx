@@ -5,31 +5,33 @@ import * as Linking from "expo-linking";
 
 WebBrowser.maybeCompleteAuthSession();
 
-const backendUrl = "https://taskapp-15u7.onrender.com";
+const BACKEND_URL = "https://taskapp-15u7.onrender.com";
 
 export default function App() {
-  const [token, setToken] = React.useState<string | null>(null);
+  const [accessToken, setAccessToken] = React.useState<string | null>(null);
 
   const login = async () => {
     const result = await WebBrowser.openAuthSessionAsync(
-        `${backendUrl}/login`,
+        `${BACKEND_URL}/login`,
         "taskapp://redirect"
     );
 
-    console.log("result", result);
+    console.log("Auth result:", result);
 
     if (result.type === "success" && result.url) {
-      // Parse token from URL
       const parsed = Linking.parse(result.url);
-      const accessToken = parsed.queryParams?.token; // <- must match backend
-      if (accessToken) setToken(accessToken);
+      const token = parsed.queryParams?.access_token;
+      if (token) {
+        setAccessToken(token);
+        console.log("Access token:", token);
+      }
     }
   };
 
   return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        {token ? (
-            <Text>Welcome! Token: {token}</Text>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        {accessToken ? (
+            <Text>Logged in! Token: {accessToken}</Text>
         ) : (
             <Button title="Login with Spotify" onPress={login} />
         )}
