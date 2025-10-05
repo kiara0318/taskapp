@@ -34,6 +34,9 @@
         "projectId": "9285e5f0-6c29-4bfa-8025-bf723afc45b2"
       }
     },
-    "owner": "kiara0318"
+    "owner": "kiara0318",
+    "plugins": [
+      "expo-web-browser"
+    ]
   }
 }
