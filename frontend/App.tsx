@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Text, View } from "react-native";
 import * as WebBrowser from "expo-web-browser";
-import * as AuthSession from "expo-auth-session";
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -15,7 +14,12 @@ export default function App() {
         `${backendUrl}/login`,
         "taskapp://redirect"
     );
-    console.log(result);
+
+    if (result.url) {
+      // Parse token from URL
+      const urlParams = new URLSearchParams(result.url.split("?")[1]);
+      setToken(urlParams.get("access_token"));
+    }
   };
 
   return (

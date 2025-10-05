@@ -27,4 +27,5 @@ def callback():
         "client_id": CLIENT_ID,
         "client_secret": CLIENT_SECRET
     })
-    return res.json()
+
+    return redirect(f"{REDIRECT_URI}?access_token={access_token}")

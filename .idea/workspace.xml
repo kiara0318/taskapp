@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4f491417-4200-419a-a5c9-b770dc8bc0d7" name="Changes" comment="first push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
@@ -24,7 +25,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -87,7 +88,7 @@
       <workItem from="1759615354058" duration="4130000" />
       <workItem from="1759633781634" duration="2884000" />
       <workItem from="1759676711864" duration="90000" />
-      <workItem from="1759676810557" duration="2791000" />
+      <workItem from="1759676810557" duration="5249000" />
     </task>
     <task id="LOCAL-00001" summary="first push">
       <option name="closed" value="true" />
